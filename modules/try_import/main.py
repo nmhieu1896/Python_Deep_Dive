@@ -16,7 +16,7 @@ with open(module_rel_file_path, 'r') as code_file:
 mod = types.ModuleType(module_name)
 mod.__file__ = module_abs_file_path
 
-#set a ref in sys.modules
+#set a ref in sys.modulesto avoid re-importing
 sys.modules[module_name] = mod
 
 # compile
